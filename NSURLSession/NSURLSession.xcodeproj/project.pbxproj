@@ -14,6 +14,7 @@
 		5F652251237F19CE000F2897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F652250237F19CE000F2897 /* Assets.xcassets */; };
 		5F652254237F19CE000F2897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F652252237F19CE000F2897 /* LaunchScreen.storyboard */; };
 		5F65225C237F1A25000F2897 /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F65225B237F1A25000F2897 /* Pais.swift */; };
+		5F65225F237F21BF000F2897 /* mockedJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F65225E237F21BF000F2897 /* mockedJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		5F652253237F19CE000F2897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F652255237F19CE000F2897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F65225B237F1A25000F2897 /* Pais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
+		5F65225D237F2179000F2897 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5F65225E237F21BF000F2897 /* mockedJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockedJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		5F65223B237F19BF000F2897 = {
 			isa = PBXGroup;
 			children = (
+				5F65225D237F2179000F2897 /* README.md */,
 				5F652246237F19C0000F2897 /* NSURLSession */,
 				5F652245237F19C0000F2897 /* Products */,
 			);
@@ -66,6 +70,7 @@
 				5F652250237F19CE000F2897 /* Assets.xcassets */,
 				5F652252237F19CE000F2897 /* LaunchScreen.storyboard */,
 				5F652255237F19CE000F2897 /* Info.plist */,
+				5F65225E237F21BF000F2897 /* mockedJSON.json */,
 			);
 			path = NSURLSession;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F65225F237F21BF000F2897 /* mockedJSON.json in Resources */,
 				5F652254237F19CE000F2897 /* LaunchScreen.storyboard in Resources */,
 				5F652251237F19CE000F2897 /* Assets.xcassets in Resources */,
 				5F65224F237F19C0000F2897 /* Main.storyboard in Resources */,

@@ -15,45 +15,49 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Properties
     var paises: [Pais] = []
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         loadData()
     }
     
     // MARK: - Methods
     func loadData() {
         
-        if let url = URL(string: "https://applause.codes/api/v1/paisesecapitais") {
-            
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data {
-                    do {
-                        
-                        self.paises = try JSONDecoder().decode([Pais].self, from: data)
-                        
-                        /*
-                         print("Países encontrados: \(self.paises.count)")
-                         
-                         for pais in self.paises {
-                         print("País: \(pais.pais) | Capital: \(pais.capital)")
-                         }
-                         */
-                        
-                        DispatchQueue.main.async { [weak self] in
-                            self?.tableView.reloadData()
-                        }
-                        
-                    } catch let error {
-                        print(error)
-                    }
-                    
-                }
-            }.resume()
-            
+        guard let url = Bundle.main.url(forResource: "mockedJSON", withExtension: "json") else {
+            return
         }
         
+        // guard let url = URL(string: "https://applause.codes/api/v1/paisesecapitais") else {
+        //     return
+        // }
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                do {
+                    
+                    self.paises = try JSONDecoder().decode([Pais].self, from: data)
+                    
+                    print("Países encontrados: \(self.paises.count)")
+                    
+                    for pais in self.paises {
+                        print("País: \(pais.pais) | Capital: \(pais.capital)")
+                    }
+                    
+                    DispatchQueue.main.async { [weak self] in
+                        self?.tableView.reloadData()
+                    }
+                    
+                } catch let error {
+                    print(error)
+                }
+                
+            }
+        }.resume()
+  
     }
     
     // Mark: - Table View Data Source
